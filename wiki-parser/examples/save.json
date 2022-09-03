@@ -1,0 +1,110 @@
+{
+    "SaveName": "JSON Example Save",
+    "GameMode": "None",
+    "Date": "2/22/2015 2:44:18 PM",
+    "Table": "Table_Octagon",
+    "Sky": "Sky_Forest",
+    "Note": "This is an example save demonstrating how to use the custom shader and edit physics properties.",
+    "Rules": "",
+    "PlayerTurn": "",
+    "Grid":
+    {
+        "Type": 0,
+        "Lines": false,
+        "Snapping": false,
+        "Offset": false,
+        "xSize": 2.0,
+        "ySize": 2.0
+    },
+    "DrawImage": "",
+    "ObjectStates": [
+    {
+        "Name": "Custom_Model",
+        "Transform":
+        {
+            "posX": -6.14662361,
+            "posY": 1.02520883,
+            "posZ": 0.435920656,
+            "rotX": 8.387837E-06,
+            "rotY": 179.991959,
+            "rotZ": 1.49730022E-05,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+        },
+        "Nickname": "Example Chip",
+        "Description": "You can see how to tweak the custom shader with this example.",
+        "ColorDiffuse":
+        {
+            "r": 0.9999999,
+            "g": 0.9999999,
+            "b": 0.9999999
+        },
+        "Grid": true,
+        "Locked": false,
+        "CustomMesh":
+        {
+            "MeshURL": "http://pastebin.com/raw.php?i=00YWZ28Y",
+            "DiffuseURL": "http://www.berserk-games.com/images/TTS-Coin-Template.png",
+            "NormalURL": "",
+            "ColliderURL": "",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 5,
+            "CustomShader":
+            {
+                "SpecularColor":
+                {
+                    "r": 0.9,
+                    "g": 0.9,
+                    "b": 0.9
+                },
+                "SpecularIntensity": 0.1,
+                "SpecularSharpness": 3.0,
+                "FresnelStrength": 0.1
+            }
+        }
+    },
+    {
+        "Name": "Die_20",
+        "Transform":
+        {
+            "posX": 5.3177824,
+            "posY": 1.38374138,
+            "posZ": 0.03327445,
+            "rotX": 10.8123074,
+            "rotY": 0.00238325051,
+            "rotZ": 198.000031,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+        },
+        "Nickname": "Example D20",
+        "Description": "You can see how to tweak the physics properties of an object with this example.",
+        "ColorDiffuse":
+        {
+            "r": 0.7960843,
+            "g": 0.0,
+            "b": 0.0
+        },
+        "Grid": false,
+        "Locked": false,
+        "MaterialIndex": 0,
+        "PhysicsMaterial":
+        {
+            "DynamicFriction": 0.4,
+            "StaticFriction": 0.4,
+            "Bounciness": 0.0,
+            "FrictionCombine": 0,
+            "BounceCombine": 0
+        },
+        "Rigidbody":
+        {
+            "Mass": 1.0,
+            "Drag": 0.1,
+            "AngularDrag": 0.1,
+            "UseGravity": true
+        }
+    }
+    ]
+}

@@ -1,0 +1,1539 @@
+
+<Defaults>
+  <Text fontSize="28" />
+  <Dropdown fontSize="28" itemHeight="32" />
+  <Button fontSize="28" />
+  <InputField fontSize="28" />
+</Defaults>
+
+<Panel
+  id="filters-root-Red"
+  padding="15 15 15 15"
+  width="50%"
+  height="80%"
+  showAnimation="Grow"
+  hideAnimation="FadeOut"
+  color="#eeeeee"
+  active="false"
+  visibility="Red"
+>
+  <VerticalLayout
+    childAlignment="MiddleCenter"
+  >
+    <HorizontalLayout spacing="15" minWidth="40" preferredHeight="40" flexibleHeight="0">
+      <VerticalLayout>
+        <Text>Color:</Text>
+        <Dropdown id="color-Red" onValueChanged="changeFilter">
+          <Option id="defaultColor-Red">None</Option>
+          <Option>White</Option>
+          <Option>Blue</Option>
+          <Option>Red</Option>
+          <Option>Green</Option>
+          <Option>Black</Option>
+          <Option>Colorless</Option>
+
+        </Dropdown>
+      </VerticalLayout>
+      <VerticalLayout>
+        <Text>Type:</Text>
+        <Dropdown id="type-Red" onValueChanged="changeFilter">
+          <Option id="defaultType">Z/X</Option>
+          <Option>Event</Option>
+          <Option>Player</Option>
+          <Option>Z/X EX</Option>
+          <Option>EV EX</Option>
+          <Option>PL EX</Option>
+          <Option>Shift</Option>
+          <Option>Z/X OB</Option>
+          <Option>Marker</Option>
+          <Option>Token</Option>
+          <Option>Counter</Option>
+          <Option>LRIG</Option>
+          <Option>Any</Option>
+
+        </Dropdown>
+      </VerticalLayout>
+      <VerticalLayout>
+        <Text>Icon:</Text>
+        <Dropdown id="icon-Red" onValueChanged="changeFilter">
+          <Option id="defaultIcon-Red">None</Option>
+          <Option>Ignition</Option>
+          <Option>Evol Seed</Option>
+          <Option>Key</Option>
+          <Option>Melody</Option>
+          <Option>Memorial Piece</Option>
+          <Option>Star Piece</Option>
+
+          <Option>No icon</Option>
+        </Dropdown>
+      </VerticalLayout>
+    </HorizontalLayout>
+    
+    <HorizontalLayout spacing="15"  minWidth="40" preferredHeight="40" flexibleHeight="0">
+      <VerticalLayout>
+        <Text>Tribe:</Text>
+        <Dropdown id="tribe-Red" onValueChanged="changeFilter">
+          <Option id="defaultTribe-Red">None</Option>
+          <Option>Adell</Option>
+          <Option>Ahhazu</Option>
+          <Option>Aircraft Carrier</Option>
+          <Option>Amalie</Option>
+          <Option>Angel</Option>
+          <Option>Angelic Dragon</Option>
+          <Option>Anshar-Kishar</Option>
+          <Option>Anu</Option>
+          <Option>Ariael</Option>
+          <Option>Arlecchino</Option>
+          <Option>Artina</Option>
+          <Option>Asagi</Option>
+          <Option>Ash</Option>
+          <Option>Astraldraco</Option>
+          <Option>Avatar</Option>
+          <Option>Aviation Battleship</Option>
+          <Option>Axel</Option>
+          <Option>Baal</Option>
+          <Option>Battle Dress</Option>
+          <Option>Battlecruiser</Option>
+          <Option>Battleship</Option>
+          <Option>Biohazard</Option>
+          <Option>Braver</Option>
+          <Option>Cait Sith</Option>
+          <Option>Chelka</Option>
+          <Option>Chloe</Option>
+          <Option>Christo</Option>
+          <Option>Cruel Dragon</Option>
+          <Option>Cthulhu</Option>
+          <Option>Curator</Option>
+          <Option>Desco</Option>
+          <Option>Destroyer</Option>
+          <Option>Diabolus</Option>
+          <Option>Dingir</Option>
+          <Option>Dronya</Option>
+          <Option>Eagle Union</Option>
+          <Option>El Shaddai</Option>
+          <Option>Elder Dragon</Option>
+          <Option>Enki</Option>
+          <Option>Enlil</Option>
+          <Option>Enoch</Option>
+          <Option>Ereshkigal</Option>
+          <Option>Etna</Option>
+          <Option>E☆2</Option>
+          <Option>Flonne</Option>
+          <Option>Fuka</Option>
+          <Option>Gambiel</Option>
+          <Option>Gear Dragon</Option>
+          <Option>Gigantic</Option>
+          <Option>Gilgamesh</Option>
+          <Option>Glorious Dragon</Option>
+          <Option>Guardian</Option>
+          <Option>Heavy Cruiser</Option>
+          <Option>Himekami</Option>
+          <Option>Hourai</Option>
+          <Option>Hundred Knight</Option>
+          <Option>Huninnmuginn</Option>
+          <Option>iDA</Option>
+          <Option>Idealize</Option>
+          <Option>Igalima</Option>
+          <Option>Inanna</Option>
+          <Option>Iron Blood</Option>
+          <Option>Ishtar</Option>
+          <Option>Junya Kazami</Option>
+          <Option>Jupiel</Option>
+          <Option>Kaiten Mutenmaru</Option>
+          <Option>Ki</Option>
+          <Option>Killer Machine</Option>
+          <Option>Killia</Option>
+          <Option>Kisaragi</Option>
+          <Option>Lahamu</Option>
+          <Option>Laharl</Option>
+          <Option>Lalami</Option>
+          <Option>Lamastu</Option>
+          <Option>Lavily Lalula La</Option>
+          <Option>Leafer</Option>
+          <Option>Liezerota</Option>
+          <Option>Light Aircraft Carrier</Option>
+          <Option>Light Cruiser</Option>
+          <Option>Lilliel</Option>
+          <Option>Luca</Option>
+          <Option>Lucifel</Option>
+          <Option>Lulu</Option>
+          <Option>Lycanthrope</Option>
+          <Option>Majorita</Option>
+          <Option>Mao</Option>
+          <Option>Marduk</Option>
+          <Option>Mariel</Option>
+          <Option>Marona</Option>
+          <Option>Mega Man</Option>
+          <Option>Meister</Option>
+          <Option>Mermaid</Option>
+          <Option>Metal Fortress</Option>
+          <Option>Metallia</Option>
+          <Option>Mid-Boss</Option>
+          <Option>Milm</Option>
+          <Option>Mion</Option>
+          <Option>Monitor</Option>
+          <Option>Monster Hunter</Option>
+          <Option>Ms. Dungeon</Option>
+          <Option>Mythos</Option>
+          <Option>Nammu</Option>
+          <Option>Nanaya</Option>
+          <Option>Nannal</Option>
+          <Option>Nergal</Option>
+          <Option>Nezaria</Option>
+          <Option>Ningal</Option>
+          <Option>Ninhursag</Option>
+          <Option>Ninkasi</Option>
+          <Option>Ninurta</Option>
+          <Option>Nosferatu</Option>
+          <Option>Overboost</Option>
+          <Option>Overshift</Option>
+          <Option>Petta</Option>
+          <Option>Phyllis</Option>
+          <Option>Plasect</Option>
+          <Option>Pram</Option>
+          <Option>Predator</Option>
+          <Option>Priere</Option>
+          <Option>Prinny</Option>
+          <Option>Punisher</Option>
+          <Option>Puppet Soldier</Option>
+          <Option>Raspberyl</Option>
+          <Option>Red Magnus</Option>
+          <Option>Repair Ship</Option>
+          <Option>Retrofit</Option>
+          <Option>Reunion</Option>
+          <Option>Royal Navy</Option>
+          <Option>Rozalin</Option>
+          <Option>Rutile</Option>
+          <Option>Sacred Beast</Option>
+          <Option>Saki Hojo</Option>
+          <Option>Sakura Empire</Option>
+          <Option>Seraphina</Option>
+          <Option>Shamash</Option>
+          <Option>SHiFT</Option>
+          <Option>Shulshagana</Option>
+          <Option>Sicily</Option>
+          <Option>Soichiro Kogure</Option>
+          <Option>Stella</Option>
+          <Option>Submarine</Option>
+          <Option>Sud</Option>
+          <Option>Tama</Option>
+          <Option>Tiamat</Option>
+          <Option>Tortures</Option>
+          <Option>Tractatus de Monstrum</Option>
+          <Option>True Dragon</Option>
+          <Option>Unlimited Boost</Option>
+          <Option>Usalia</Option>
+          <Option>Valentine</Option>
+          <Option>Valvatorez</Option>
+          <Option>Vesparose</Option>
+          <Option>Vine Dragon</Option>
+          <Option>Visco</Option>
+          <Option>Void Dark</Option>
+          <Option>Waker</Option>
+          <Option>World Avatar</Option>
+          <Option>Yith</Option>
+          <Option>Zababa</Option>
+          <Option>Zeccar</Option>
+          <Option>Zeroken</Option>
+          <Option>Zetta</Option>
+
+        </Dropdown>
+      </VerticalLayout>
+      <VerticalLayout>
+        <Text>Player:</Text>
+        <Dropdown id="player-Red" onValueChanged="changeFilter">
+          <Option id="defaultPlayer-Red">None</Option>
+          <Option>Arane P</Option>
+          <Option>Arane P EX</Option>
+          <Option>Asuka</Option>
+          <Option>Asuka EX</Option>
+          <Option>Avance EX</Option>
+          <Option>Ayase</Option>
+          <Option>Ayase EX</Option>
+          <Option>Azumi</Option>
+          <Option>Azumi EX</Option>
+          <Option>Azur EX</Option>
+          <Option>Bane</Option>
+          <Option>Barahara</Option>
+          <Option>Brionac EX</Option>
+          <Option>Cana P</Option>
+          <Option>Cana P EX</Option>
+          <Option>Chitose</Option>
+          <Option>Chitose EX</Option>
+          <Option>Commander</Option>
+          <Option>Dakki EX</Option>
+          <Option>Ea</Option>
+          <Option>Ea EX</Option>
+          <Option>Ena</Option>
+          <Option>Enju P</Option>
+          <Option>Enju P EX</Option>
+          <Option>Etsumin</Option>
+          <Option>Honome</Option>
+          <Option>Honome EX</Option>
+          <Option>Horus EX</Option>
+          <Option>Iriuda</Option>
+          <Option>Iriuda EX</Option>
+          <Option>Izumo</Option>
+          <Option>Izumo EX</Option>
+          <Option>Kasuga</Option>
+          <Option>Kasuga EX</Option>
+          <Option>Kazane EX</Option>
+          <Option>Kisara</Option>
+          <Option>Kisara EX</Option>
+          <Option>Kushuru</Option>
+          <Option>Levi</Option>
+          <Option>Lilian EX</Option>
+          <Option>Lyrph</Option>
+          <Option>Marie P</Option>
+          <Option>Marie P EX</Option>
+          <Option>Matoi</Option>
+          <Option>Meduse EX</Option>
+          <Option>Meiraru</Option>
+          <Option>Meteor EX</Option>
+          <Option>Mikado</Option>
+          <Option>Miko</Option>
+          <Option>Misaki</Option>
+          <Option>Misaki EX</Option>
+          <Option>Nammu EX</Option>
+          <Option>Nanao</Option>
+          <Option>Nanao EX</Option>
+          <Option>Niggu &#38; Theogo</Option>
+          <Option>Nina</Option>
+          <Option>Nina EX</Option>
+          <Option>Nino</Option>
+          <Option>Nu P</Option>
+          <Option>Nu P EX</Option>
+          <Option>Pecteilis P</Option>
+          <Option>Pecteilis P EX</Option>
+          <Option>Princess</Option>
+          <Option>Princess EX</Option>
+          <Option>Prism P</Option>
+          <Option>Prism P EX</Option>
+          <Option>Reia</Option>
+          <Option>Reia &#38; Suguru EX</Option>
+          <Option>Sakura</Option>
+          <Option>Sakura EX</Option>
+          <Option>Sera</Option>
+          <Option>Sera EX</Option>
+          <Option>Shana</Option>
+          <Option>Shana EX</Option>
+          <Option>Shuri</Option>
+          <Option>Sol</Option>
+          <Option>Soma</Option>
+          <Option>Suguru</Option>
+          <Option>Ugly P</Option>
+          <Option>Ugly P EX</Option>
+          <Option>Urara</Option>
+          <Option>Urara EX</Option>
+          <Option>Yachiyo</Option>
+          <Option>Yachiyo EX</Option>
+          <Option>Yamato</Option>
+          <Option>Yith</Option>
+          <Option>Yith EX</Option>
+          <Option>Yui</Option>
+          <Option>Yuni</Option>
+          <Option>Yutaka</Option>
+          <Option>Yutaka EX</Option>
+
+        </Dropdown>
+      </VerticalLayout>
+    </HorizontalLayout>
+    <VerticalLayout padding="0 0 15 15" spacing="15">
+      <InputField
+        id="powerSearch-Red"
+        placeholder="Search by power"
+        onValueChanged="changeSearch"
+      ></InputField>
+      <InputField
+        id="costSearch-Red"
+        placeholder="Search by cost"
+        onValueChanged="changeSearch"
+      ></InputField>
+      <InputField
+        id="nameSearch-Red"
+        placeholder="Search by name"
+        onValueChanged="changeSearch"
+      ></InputField>
+      <InputField
+        id="textSearch-Red"
+        placeholder="Search by effect text"
+        onValueChanged="changeSearch"
+      ></InputField>
+    </VerticalLayout>
+    <HorizontalLayout
+      childAlignment="MiddleCenter"
+      spacing="15"
+      preferredHeight="28"
+      flexibleHeight="0"
+    >
+      <Button
+        alignment="MiddleCenter"
+        onClick="applyFilters"
+        color="#66ff66"
+      >Apply</Button>
+      <Button alignment="MiddleCenter" onClick="resetFilters">Reset</Button>
+      <Button alignment="MiddleCenter" onClick="closeFilters">Close</Button>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Panel>
+<Button
+  width="200"
+  height="100"
+  rectAlignment="LowerRight"
+  offsetXY="-100 30"
+  alignment="MiddleCenter"
+  fontSize="28"
+  onClick="openFilters"
+  visibility="Red"
+>
+  Filters
+</Button>
+
+<Panel
+  id="filters-root-Blue"
+  padding="15 15 15 15"
+  width="50%"
+  height="80%"
+  showAnimation="Grow"
+  hideAnimation="FadeOut"
+  color="#eeeeee"
+  active="false"
+  visibility="Blue"
+>
+  <VerticalLayout
+    childAlignment="MiddleCenter"
+  >
+    <HorizontalLayout spacing="15" minWidth="40" preferredHeight="40" flexibleHeight="0">
+      <VerticalLayout>
+        <Text>Color:</Text>
+        <Dropdown id="color-Blue" onValueChanged="changeFilter">
+          <Option id="defaultColor-Blue">None</Option>
+          <Option>White</Option>
+          <Option>Blue</Option>
+          <Option>Red</Option>
+          <Option>Green</Option>
+          <Option>Black</Option>
+          <Option>Colorless</Option>
+
+        </Dropdown>
+      </VerticalLayout>
+      <VerticalLayout>
+        <Text>Type:</Text>
+        <Dropdown id="type-Blue" onValueChanged="changeFilter">
+          <Option id="defaultType">Z/X</Option>
+          <Option>Event</Option>
+          <Option>Player</Option>
+          <Option>Z/X EX</Option>
+          <Option>EV EX</Option>
+          <Option>PL EX</Option>
+          <Option>Shift</Option>
+          <Option>Z/X OB</Option>
+          <Option>Marker</Option>
+          <Option>Token</Option>
+          <Option>Counter</Option>
+          <Option>LRIG</Option>
+          <Option>Any</Option>
+
+        </Dropdown>
+      </VerticalLayout>
+      <VerticalLayout>
+        <Text>Icon:</Text>
+        <Dropdown id="icon-Blue" onValueChanged="changeFilter">
+          <Option id="defaultIcon-Blue">None</Option>
+          <Option>Ignition</Option>
+          <Option>Evol Seed</Option>
+          <Option>Key</Option>
+          <Option>Melody</Option>
+          <Option>Memorial Piece</Option>
+          <Option>Star Piece</Option>
+
+          <Option>No icon</Option>
+        </Dropdown>
+      </VerticalLayout>
+    </HorizontalLayout>
+    
+    <HorizontalLayout spacing="15"  minWidth="40" preferredHeight="40" flexibleHeight="0">
+      <VerticalLayout>
+        <Text>Tribe:</Text>
+        <Dropdown id="tribe-Blue" onValueChanged="changeFilter">
+          <Option id="defaultTribe-Blue">None</Option>
+          <Option>Adell</Option>
+          <Option>Ahhazu</Option>
+          <Option>Aircraft Carrier</Option>
+          <Option>Amalie</Option>
+          <Option>Angel</Option>
+          <Option>Angelic Dragon</Option>
+          <Option>Anshar-Kishar</Option>
+          <Option>Anu</Option>
+          <Option>Ariael</Option>
+          <Option>Arlecchino</Option>
+          <Option>Artina</Option>
+          <Option>Asagi</Option>
+          <Option>Ash</Option>
+          <Option>Astraldraco</Option>
+          <Option>Avatar</Option>
+          <Option>Aviation Battleship</Option>
+          <Option>Axel</Option>
+          <Option>Baal</Option>
+          <Option>Battle Dress</Option>
+          <Option>Battlecruiser</Option>
+          <Option>Battleship</Option>
+          <Option>Biohazard</Option>
+          <Option>Braver</Option>
+          <Option>Cait Sith</Option>
+          <Option>Chelka</Option>
+          <Option>Chloe</Option>
+          <Option>Christo</Option>
+          <Option>Cruel Dragon</Option>
+          <Option>Cthulhu</Option>
+          <Option>Curator</Option>
+          <Option>Desco</Option>
+          <Option>Destroyer</Option>
+          <Option>Diabolus</Option>
+          <Option>Dingir</Option>
+          <Option>Dronya</Option>
+          <Option>Eagle Union</Option>
+          <Option>El Shaddai</Option>
+          <Option>Elder Dragon</Option>
+          <Option>Enki</Option>
+          <Option>Enlil</Option>
+          <Option>Enoch</Option>
+          <Option>Ereshkigal</Option>
+          <Option>Etna</Option>
+          <Option>E☆2</Option>
+          <Option>Flonne</Option>
+          <Option>Fuka</Option>
+          <Option>Gambiel</Option>
+          <Option>Gear Dragon</Option>
+          <Option>Gigantic</Option>
+          <Option>Gilgamesh</Option>
+          <Option>Glorious Dragon</Option>
+          <Option>Guardian</Option>
+          <Option>Heavy Cruiser</Option>
+          <Option>Himekami</Option>
+          <Option>Hourai</Option>
+          <Option>Hundred Knight</Option>
+          <Option>Huninnmuginn</Option>
+          <Option>iDA</Option>
+          <Option>Idealize</Option>
+          <Option>Igalima</Option>
+          <Option>Inanna</Option>
+          <Option>Iron Blood</Option>
+          <Option>Ishtar</Option>
+          <Option>Junya Kazami</Option>
+          <Option>Jupiel</Option>
+          <Option>Kaiten Mutenmaru</Option>
+          <Option>Ki</Option>
+          <Option>Killer Machine</Option>
+          <Option>Killia</Option>
+          <Option>Kisaragi</Option>
+          <Option>Lahamu</Option>
+          <Option>Laharl</Option>
+          <Option>Lalami</Option>
+          <Option>Lamastu</Option>
+          <Option>Lavily Lalula La</Option>
+          <Option>Leafer</Option>
+          <Option>Liezerota</Option>
+          <Option>Light Aircraft Carrier</Option>
+          <Option>Light Cruiser</Option>
+          <Option>Lilliel</Option>
+          <Option>Luca</Option>
+          <Option>Lucifel</Option>
+          <Option>Lulu</Option>
+          <Option>Lycanthrope</Option>
+          <Option>Majorita</Option>
+          <Option>Mao</Option>
+          <Option>Marduk</Option>
+          <Option>Mariel</Option>
+          <Option>Marona</Option>
+          <Option>Mega Man</Option>
+          <Option>Meister</Option>
+          <Option>Mermaid</Option>
+          <Option>Metal Fortress</Option>
+          <Option>Metallia</Option>
+          <Option>Mid-Boss</Option>
+          <Option>Milm</Option>
+          <Option>Mion</Option>
+          <Option>Monitor</Option>
+          <Option>Monster Hunter</Option>
+          <Option>Ms. Dungeon</Option>
+          <Option>Mythos</Option>
+          <Option>Nammu</Option>
+          <Option>Nanaya</Option>
+          <Option>Nannal</Option>
+          <Option>Nergal</Option>
+          <Option>Nezaria</Option>
+          <Option>Ningal</Option>
+          <Option>Ninhursag</Option>
+          <Option>Ninkasi</Option>
+          <Option>Ninurta</Option>
+          <Option>Nosferatu</Option>
+          <Option>Overboost</Option>
+          <Option>Overshift</Option>
+          <Option>Petta</Option>
+          <Option>Phyllis</Option>
+          <Option>Plasect</Option>
+          <Option>Pram</Option>
+          <Option>Predator</Option>
+          <Option>Priere</Option>
+          <Option>Prinny</Option>
+          <Option>Punisher</Option>
+          <Option>Puppet Soldier</Option>
+          <Option>Raspberyl</Option>
+          <Option>Red Magnus</Option>
+          <Option>Repair Ship</Option>
+          <Option>Retrofit</Option>
+          <Option>Reunion</Option>
+          <Option>Royal Navy</Option>
+          <Option>Rozalin</Option>
+          <Option>Rutile</Option>
+          <Option>Sacred Beast</Option>
+          <Option>Saki Hojo</Option>
+          <Option>Sakura Empire</Option>
+          <Option>Seraphina</Option>
+          <Option>Shamash</Option>
+          <Option>SHiFT</Option>
+          <Option>Shulshagana</Option>
+          <Option>Sicily</Option>
+          <Option>Soichiro Kogure</Option>
+          <Option>Stella</Option>
+          <Option>Submarine</Option>
+          <Option>Sud</Option>
+          <Option>Tama</Option>
+          <Option>Tiamat</Option>
+          <Option>Tortures</Option>
+          <Option>Tractatus de Monstrum</Option>
+          <Option>True Dragon</Option>
+          <Option>Unlimited Boost</Option>
+          <Option>Usalia</Option>
+          <Option>Valentine</Option>
+          <Option>Valvatorez</Option>
+          <Option>Vesparose</Option>
+          <Option>Vine Dragon</Option>
+          <Option>Visco</Option>
+          <Option>Void Dark</Option>
+          <Option>Waker</Option>
+          <Option>World Avatar</Option>
+          <Option>Yith</Option>
+          <Option>Zababa</Option>
+          <Option>Zeccar</Option>
+          <Option>Zeroken</Option>
+          <Option>Zetta</Option>
+
+        </Dropdown>
+      </VerticalLayout>
+      <VerticalLayout>
+        <Text>Player:</Text>
+        <Dropdown id="player-Blue" onValueChanged="changeFilter">
+          <Option id="defaultPlayer-Blue">None</Option>
+          <Option>Arane P</Option>
+          <Option>Arane P EX</Option>
+          <Option>Asuka</Option>
+          <Option>Asuka EX</Option>
+          <Option>Avance EX</Option>
+          <Option>Ayase</Option>
+          <Option>Ayase EX</Option>
+          <Option>Azumi</Option>
+          <Option>Azumi EX</Option>
+          <Option>Azur EX</Option>
+          <Option>Bane</Option>
+          <Option>Barahara</Option>
+          <Option>Brionac EX</Option>
+          <Option>Cana P</Option>
+          <Option>Cana P EX</Option>
+          <Option>Chitose</Option>
+          <Option>Chitose EX</Option>
+          <Option>Commander</Option>
+          <Option>Dakki EX</Option>
+          <Option>Ea</Option>
+          <Option>Ea EX</Option>
+          <Option>Ena</Option>
+          <Option>Enju P</Option>
+          <Option>Enju P EX</Option>
+          <Option>Etsumin</Option>
+          <Option>Honome</Option>
+          <Option>Honome EX</Option>
+          <Option>Horus EX</Option>
+          <Option>Iriuda</Option>
+          <Option>Iriuda EX</Option>
+          <Option>Izumo</Option>
+          <Option>Izumo EX</Option>
+          <Option>Kasuga</Option>
+          <Option>Kasuga EX</Option>
+          <Option>Kazane EX</Option>
+          <Option>Kisara</Option>
+          <Option>Kisara EX</Option>
+          <Option>Kushuru</Option>
+          <Option>Levi</Option>
+          <Option>Lilian EX</Option>
+          <Option>Lyrph</Option>
+          <Option>Marie P</Option>
+          <Option>Marie P EX</Option>
+          <Option>Matoi</Option>
+          <Option>Meduse EX</Option>
+          <Option>Meiraru</Option>
+          <Option>Meteor EX</Option>
+          <Option>Mikado</Option>
+          <Option>Miko</Option>
+          <Option>Misaki</Option>
+          <Option>Misaki EX</Option>
+          <Option>Nammu EX</Option>
+          <Option>Nanao</Option>
+          <Option>Nanao EX</Option>
+          <Option>Niggu &#38; Theogo</Option>
+          <Option>Nina</Option>
+          <Option>Nina EX</Option>
+          <Option>Nino</Option>
+          <Option>Nu P</Option>
+          <Option>Nu P EX</Option>
+          <Option>Pecteilis P</Option>
+          <Option>Pecteilis P EX</Option>
+          <Option>Princess</Option>
+          <Option>Princess EX</Option>
+          <Option>Prism P</Option>
+          <Option>Prism P EX</Option>
+          <Option>Reia</Option>
+          <Option>Reia &#38; Suguru EX</Option>
+          <Option>Sakura</Option>
+          <Option>Sakura EX</Option>
+          <Option>Sera</Option>
+          <Option>Sera EX</Option>
+          <Option>Shana</Option>
+          <Option>Shana EX</Option>
+          <Option>Shuri</Option>
+          <Option>Sol</Option>
+          <Option>Soma</Option>
+          <Option>Suguru</Option>
+          <Option>Ugly P</Option>
+          <Option>Ugly P EX</Option>
+          <Option>Urara</Option>
+          <Option>Urara EX</Option>
+          <Option>Yachiyo</Option>
+          <Option>Yachiyo EX</Option>
+          <Option>Yamato</Option>
+          <Option>Yith</Option>
+          <Option>Yith EX</Option>
+          <Option>Yui</Option>
+          <Option>Yuni</Option>
+          <Option>Yutaka</Option>
+          <Option>Yutaka EX</Option>
+
+        </Dropdown>
+      </VerticalLayout>
+    </HorizontalLayout>
+    <VerticalLayout padding="0 0 15 15" spacing="15">
+      <InputField
+        id="powerSearch-Blue"
+        placeholder="Search by power"
+        onValueChanged="changeSearch"
+      ></InputField>
+      <InputField
+        id="costSearch-Blue"
+        placeholder="Search by cost"
+        onValueChanged="changeSearch"
+      ></InputField>
+      <InputField
+        id="nameSearch-Blue"
+        placeholder="Search by name"
+        onValueChanged="changeSearch"
+      ></InputField>
+      <InputField
+        id="textSearch-Blue"
+        placeholder="Search by effect text"
+        onValueChanged="changeSearch"
+      ></InputField>
+    </VerticalLayout>
+    <HorizontalLayout
+      childAlignment="MiddleCenter"
+      spacing="15"
+      preferredHeight="28"
+      flexibleHeight="0"
+    >
+      <Button
+        alignment="MiddleCenter"
+        onClick="applyFilters"
+        color="#66ff66"
+      >Apply</Button>
+      <Button alignment="MiddleCenter" onClick="resetFilters">Reset</Button>
+      <Button alignment="MiddleCenter" onClick="closeFilters">Close</Button>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Panel>
+<Button
+  width="200"
+  height="100"
+  rectAlignment="LowerRight"
+  offsetXY="-100 30"
+  alignment="MiddleCenter"
+  fontSize="28"
+  onClick="openFilters"
+  visibility="Blue"
+>
+  Filters
+</Button>
+
+<Panel
+  id="filters-root-Green"
+  padding="15 15 15 15"
+  width="50%"
+  height="80%"
+  showAnimation="Grow"
+  hideAnimation="FadeOut"
+  color="#eeeeee"
+  active="false"
+  visibility="Green"
+>
+  <VerticalLayout
+    childAlignment="MiddleCenter"
+  >
+    <HorizontalLayout spacing="15" minWidth="40" preferredHeight="40" flexibleHeight="0">
+      <VerticalLayout>
+        <Text>Color:</Text>
+        <Dropdown id="color-Green" onValueChanged="changeFilter">
+          <Option id="defaultColor-Green">None</Option>
+          <Option>White</Option>
+          <Option>Blue</Option>
+          <Option>Red</Option>
+          <Option>Green</Option>
+          <Option>Black</Option>
+          <Option>Colorless</Option>
+
+        </Dropdown>
+      </VerticalLayout>
+      <VerticalLayout>
+        <Text>Type:</Text>
+        <Dropdown id="type-Green" onValueChanged="changeFilter">
+          <Option id="defaultType">Z/X</Option>
+          <Option>Event</Option>
+          <Option>Player</Option>
+          <Option>Z/X EX</Option>
+          <Option>EV EX</Option>
+          <Option>PL EX</Option>
+          <Option>Shift</Option>
+          <Option>Z/X OB</Option>
+          <Option>Marker</Option>
+          <Option>Token</Option>
+          <Option>Counter</Option>
+          <Option>LRIG</Option>
+          <Option>Any</Option>
+
+        </Dropdown>
+      </VerticalLayout>
+      <VerticalLayout>
+        <Text>Icon:</Text>
+        <Dropdown id="icon-Green" onValueChanged="changeFilter">
+          <Option id="defaultIcon-Green">None</Option>
+          <Option>Ignition</Option>
+          <Option>Evol Seed</Option>
+          <Option>Key</Option>
+          <Option>Melody</Option>
+          <Option>Memorial Piece</Option>
+          <Option>Star Piece</Option>
+
+          <Option>No icon</Option>
+        </Dropdown>
+      </VerticalLayout>
+    </HorizontalLayout>
+    
+    <HorizontalLayout spacing="15"  minWidth="40" preferredHeight="40" flexibleHeight="0">
+      <VerticalLayout>
+        <Text>Tribe:</Text>
+        <Dropdown id="tribe-Green" onValueChanged="changeFilter">
+          <Option id="defaultTribe-Green">None</Option>
+          <Option>Adell</Option>
+          <Option>Ahhazu</Option>
+          <Option>Aircraft Carrier</Option>
+          <Option>Amalie</Option>
+          <Option>Angel</Option>
+          <Option>Angelic Dragon</Option>
+          <Option>Anshar-Kishar</Option>
+          <Option>Anu</Option>
+          <Option>Ariael</Option>
+          <Option>Arlecchino</Option>
+          <Option>Artina</Option>
+          <Option>Asagi</Option>
+          <Option>Ash</Option>
+          <Option>Astraldraco</Option>
+          <Option>Avatar</Option>
+          <Option>Aviation Battleship</Option>
+          <Option>Axel</Option>
+          <Option>Baal</Option>
+          <Option>Battle Dress</Option>
+          <Option>Battlecruiser</Option>
+          <Option>Battleship</Option>
+          <Option>Biohazard</Option>
+          <Option>Braver</Option>
+          <Option>Cait Sith</Option>
+          <Option>Chelka</Option>
+          <Option>Chloe</Option>
+          <Option>Christo</Option>
+          <Option>Cruel Dragon</Option>
+          <Option>Cthulhu</Option>
+          <Option>Curator</Option>
+          <Option>Desco</Option>
+          <Option>Destroyer</Option>
+          <Option>Diabolus</Option>
+          <Option>Dingir</Option>
+          <Option>Dronya</Option>
+          <Option>Eagle Union</Option>
+          <Option>El Shaddai</Option>
+          <Option>Elder Dragon</Option>
+          <Option>Enki</Option>
+          <Option>Enlil</Option>
+          <Option>Enoch</Option>
+          <Option>Ereshkigal</Option>
+          <Option>Etna</Option>
+          <Option>E☆2</Option>
+          <Option>Flonne</Option>
+          <Option>Fuka</Option>
+          <Option>Gambiel</Option>
+          <Option>Gear Dragon</Option>
+          <Option>Gigantic</Option>
+          <Option>Gilgamesh</Option>
+          <Option>Glorious Dragon</Option>
+          <Option>Guardian</Option>
+          <Option>Heavy Cruiser</Option>
+          <Option>Himekami</Option>
+          <Option>Hourai</Option>
+          <Option>Hundred Knight</Option>
+          <Option>Huninnmuginn</Option>
+          <Option>iDA</Option>
+          <Option>Idealize</Option>
+          <Option>Igalima</Option>
+          <Option>Inanna</Option>
+          <Option>Iron Blood</Option>
+          <Option>Ishtar</Option>
+          <Option>Junya Kazami</Option>
+          <Option>Jupiel</Option>
+          <Option>Kaiten Mutenmaru</Option>
+          <Option>Ki</Option>
+          <Option>Killer Machine</Option>
+          <Option>Killia</Option>
+          <Option>Kisaragi</Option>
+          <Option>Lahamu</Option>
+          <Option>Laharl</Option>
+          <Option>Lalami</Option>
+          <Option>Lamastu</Option>
+          <Option>Lavily Lalula La</Option>
+          <Option>Leafer</Option>
+          <Option>Liezerota</Option>
+          <Option>Light Aircraft Carrier</Option>
+          <Option>Light Cruiser</Option>
+          <Option>Lilliel</Option>
+          <Option>Luca</Option>
+          <Option>Lucifel</Option>
+          <Option>Lulu</Option>
+          <Option>Lycanthrope</Option>
+          <Option>Majorita</Option>
+          <Option>Mao</Option>
+          <Option>Marduk</Option>
+          <Option>Mariel</Option>
+          <Option>Marona</Option>
+          <Option>Mega Man</Option>
+          <Option>Meister</Option>
+          <Option>Mermaid</Option>
+          <Option>Metal Fortress</Option>
+          <Option>Metallia</Option>
+          <Option>Mid-Boss</Option>
+          <Option>Milm</Option>
+          <Option>Mion</Option>
+          <Option>Monitor</Option>
+          <Option>Monster Hunter</Option>
+          <Option>Ms. Dungeon</Option>
+          <Option>Mythos</Option>
+          <Option>Nammu</Option>
+          <Option>Nanaya</Option>
+          <Option>Nannal</Option>
+          <Option>Nergal</Option>
+          <Option>Nezaria</Option>
+          <Option>Ningal</Option>
+          <Option>Ninhursag</Option>
+          <Option>Ninkasi</Option>
+          <Option>Ninurta</Option>
+          <Option>Nosferatu</Option>
+          <Option>Overboost</Option>
+          <Option>Overshift</Option>
+          <Option>Petta</Option>
+          <Option>Phyllis</Option>
+          <Option>Plasect</Option>
+          <Option>Pram</Option>
+          <Option>Predator</Option>
+          <Option>Priere</Option>
+          <Option>Prinny</Option>
+          <Option>Punisher</Option>
+          <Option>Puppet Soldier</Option>
+          <Option>Raspberyl</Option>
+          <Option>Red Magnus</Option>
+          <Option>Repair Ship</Option>
+          <Option>Retrofit</Option>
+          <Option>Reunion</Option>
+          <Option>Royal Navy</Option>
+          <Option>Rozalin</Option>
+          <Option>Rutile</Option>
+          <Option>Sacred Beast</Option>
+          <Option>Saki Hojo</Option>
+          <Option>Sakura Empire</Option>
+          <Option>Seraphina</Option>
+          <Option>Shamash</Option>
+          <Option>SHiFT</Option>
+          <Option>Shulshagana</Option>
+          <Option>Sicily</Option>
+          <Option>Soichiro Kogure</Option>
+          <Option>Stella</Option>
+          <Option>Submarine</Option>
+          <Option>Sud</Option>
+          <Option>Tama</Option>
+          <Option>Tiamat</Option>
+          <Option>Tortures</Option>
+          <Option>Tractatus de Monstrum</Option>
+          <Option>True Dragon</Option>
+          <Option>Unlimited Boost</Option>
+          <Option>Usalia</Option>
+          <Option>Valentine</Option>
+          <Option>Valvatorez</Option>
+          <Option>Vesparose</Option>
+          <Option>Vine Dragon</Option>
+          <Option>Visco</Option>
+          <Option>Void Dark</Option>
+          <Option>Waker</Option>
+          <Option>World Avatar</Option>
+          <Option>Yith</Option>
+          <Option>Zababa</Option>
+          <Option>Zeccar</Option>
+          <Option>Zeroken</Option>
+          <Option>Zetta</Option>
+
+        </Dropdown>
+      </VerticalLayout>
+      <VerticalLayout>
+        <Text>Player:</Text>
+        <Dropdown id="player-Green" onValueChanged="changeFilter">
+          <Option id="defaultPlayer-Green">None</Option>
+          <Option>Arane P</Option>
+          <Option>Arane P EX</Option>
+          <Option>Asuka</Option>
+          <Option>Asuka EX</Option>
+          <Option>Avance EX</Option>
+          <Option>Ayase</Option>
+          <Option>Ayase EX</Option>
+          <Option>Azumi</Option>
+          <Option>Azumi EX</Option>
+          <Option>Azur EX</Option>
+          <Option>Bane</Option>
+          <Option>Barahara</Option>
+          <Option>Brionac EX</Option>
+          <Option>Cana P</Option>
+          <Option>Cana P EX</Option>
+          <Option>Chitose</Option>
+          <Option>Chitose EX</Option>
+          <Option>Commander</Option>
+          <Option>Dakki EX</Option>
+          <Option>Ea</Option>
+          <Option>Ea EX</Option>
+          <Option>Ena</Option>
+          <Option>Enju P</Option>
+          <Option>Enju P EX</Option>
+          <Option>Etsumin</Option>
+          <Option>Honome</Option>
+          <Option>Honome EX</Option>
+          <Option>Horus EX</Option>
+          <Option>Iriuda</Option>
+          <Option>Iriuda EX</Option>
+          <Option>Izumo</Option>
+          <Option>Izumo EX</Option>
+          <Option>Kasuga</Option>
+          <Option>Kasuga EX</Option>
+          <Option>Kazane EX</Option>
+          <Option>Kisara</Option>
+          <Option>Kisara EX</Option>
+          <Option>Kushuru</Option>
+          <Option>Levi</Option>
+          <Option>Lilian EX</Option>
+          <Option>Lyrph</Option>
+          <Option>Marie P</Option>
+          <Option>Marie P EX</Option>
+          <Option>Matoi</Option>
+          <Option>Meduse EX</Option>
+          <Option>Meiraru</Option>
+          <Option>Meteor EX</Option>
+          <Option>Mikado</Option>
+          <Option>Miko</Option>
+          <Option>Misaki</Option>
+          <Option>Misaki EX</Option>
+          <Option>Nammu EX</Option>
+          <Option>Nanao</Option>
+          <Option>Nanao EX</Option>
+          <Option>Niggu &#38; Theogo</Option>
+          <Option>Nina</Option>
+          <Option>Nina EX</Option>
+          <Option>Nino</Option>
+          <Option>Nu P</Option>
+          <Option>Nu P EX</Option>
+          <Option>Pecteilis P</Option>
+          <Option>Pecteilis P EX</Option>
+          <Option>Princess</Option>
+          <Option>Princess EX</Option>
+          <Option>Prism P</Option>
+          <Option>Prism P EX</Option>
+          <Option>Reia</Option>
+          <Option>Reia &#38; Suguru EX</Option>
+          <Option>Sakura</Option>
+          <Option>Sakura EX</Option>
+          <Option>Sera</Option>
+          <Option>Sera EX</Option>
+          <Option>Shana</Option>
+          <Option>Shana EX</Option>
+          <Option>Shuri</Option>
+          <Option>Sol</Option>
+          <Option>Soma</Option>
+          <Option>Suguru</Option>
+          <Option>Ugly P</Option>
+          <Option>Ugly P EX</Option>
+          <Option>Urara</Option>
+          <Option>Urara EX</Option>
+          <Option>Yachiyo</Option>
+          <Option>Yachiyo EX</Option>
+          <Option>Yamato</Option>
+          <Option>Yith</Option>
+          <Option>Yith EX</Option>
+          <Option>Yui</Option>
+          <Option>Yuni</Option>
+          <Option>Yutaka</Option>
+          <Option>Yutaka EX</Option>
+
+        </Dropdown>
+      </VerticalLayout>
+    </HorizontalLayout>
+    <VerticalLayout padding="0 0 15 15" spacing="15">
+      <InputField
+        id="powerSearch-Green"
+        placeholder="Search by power"
+        onValueChanged="changeSearch"
+      ></InputField>
+      <InputField
+        id="costSearch-Green"
+        placeholder="Search by cost"
+        onValueChanged="changeSearch"
+      ></InputField>
+      <InputField
+        id="nameSearch-Green"
+        placeholder="Search by name"
+        onValueChanged="changeSearch"
+      ></InputField>
+      <InputField
+        id="textSearch-Green"
+        placeholder="Search by effect text"
+        onValueChanged="changeSearch"
+      ></InputField>
+    </VerticalLayout>
+    <HorizontalLayout
+      childAlignment="MiddleCenter"
+      spacing="15"
+      preferredHeight="28"
+      flexibleHeight="0"
+    >
+      <Button
+        alignment="MiddleCenter"
+        onClick="applyFilters"
+        color="#66ff66"
+      >Apply</Button>
+      <Button alignment="MiddleCenter" onClick="resetFilters">Reset</Button>
+      <Button alignment="MiddleCenter" onClick="closeFilters">Close</Button>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Panel>
+<Button
+  width="200"
+  height="100"
+  rectAlignment="LowerRight"
+  offsetXY="-100 30"
+  alignment="MiddleCenter"
+  fontSize="28"
+  onClick="openFilters"
+  visibility="Green"
+>
+  Filters
+</Button>
+
+<Panel
+  id="filters-root-Purple"
+  padding="15 15 15 15"
+  width="50%"
+  height="80%"
+  showAnimation="Grow"
+  hideAnimation="FadeOut"
+  color="#eeeeee"
+  active="false"
+  visibility="Purple"
+>
+  <VerticalLayout
+    childAlignment="MiddleCenter"
+  >
+    <HorizontalLayout spacing="15" minWidth="40" preferredHeight="40" flexibleHeight="0">
+      <VerticalLayout>
+        <Text>Color:</Text>
+        <Dropdown id="color-Purple" onValueChanged="changeFilter">
+          <Option id="defaultColor-Purple">None</Option>
+          <Option>White</Option>
+          <Option>Blue</Option>
+          <Option>Red</Option>
+          <Option>Green</Option>
+          <Option>Black</Option>
+          <Option>Colorless</Option>
+
+        </Dropdown>
+      </VerticalLayout>
+      <VerticalLayout>
+        <Text>Type:</Text>
+        <Dropdown id="type-Purple" onValueChanged="changeFilter">
+          <Option id="defaultType">Z/X</Option>
+          <Option>Event</Option>
+          <Option>Player</Option>
+          <Option>Z/X EX</Option>
+          <Option>EV EX</Option>
+          <Option>PL EX</Option>
+          <Option>Shift</Option>
+          <Option>Z/X OB</Option>
+          <Option>Marker</Option>
+          <Option>Token</Option>
+          <Option>Counter</Option>
+          <Option>LRIG</Option>
+          <Option>Any</Option>
+
+        </Dropdown>
+      </VerticalLayout>
+      <VerticalLayout>
+        <Text>Icon:</Text>
+        <Dropdown id="icon-Purple" onValueChanged="changeFilter">
+          <Option id="defaultIcon-Purple">None</Option>
+          <Option>Ignition</Option>
+          <Option>Evol Seed</Option>
+          <Option>Key</Option>
+          <Option>Melody</Option>
+          <Option>Memorial Piece</Option>
+          <Option>Star Piece</Option>
+
+          <Option>No icon</Option>
+        </Dropdown>
+      </VerticalLayout>
+    </HorizontalLayout>
+    
+    <HorizontalLayout spacing="15"  minWidth="40" preferredHeight="40" flexibleHeight="0">
+      <VerticalLayout>
+        <Text>Tribe:</Text>
+        <Dropdown id="tribe-Purple" onValueChanged="changeFilter">
+          <Option id="defaultTribe-Purple">None</Option>
+          <Option>Adell</Option>
+          <Option>Ahhazu</Option>
+          <Option>Aircraft Carrier</Option>
+          <Option>Amalie</Option>
+          <Option>Angel</Option>
+          <Option>Angelic Dragon</Option>
+          <Option>Anshar-Kishar</Option>
+          <Option>Anu</Option>
+          <Option>Ariael</Option>
+          <Option>Arlecchino</Option>
+          <Option>Artina</Option>
+          <Option>Asagi</Option>
+          <Option>Ash</Option>
+          <Option>Astraldraco</Option>
+          <Option>Avatar</Option>
+          <Option>Aviation Battleship</Option>
+          <Option>Axel</Option>
+          <Option>Baal</Option>
+          <Option>Battle Dress</Option>
+          <Option>Battlecruiser</Option>
+          <Option>Battleship</Option>
+          <Option>Biohazard</Option>
+          <Option>Braver</Option>
+          <Option>Cait Sith</Option>
+          <Option>Chelka</Option>
+          <Option>Chloe</Option>
+          <Option>Christo</Option>
+          <Option>Cruel Dragon</Option>
+          <Option>Cthulhu</Option>
+          <Option>Curator</Option>
+          <Option>Desco</Option>
+          <Option>Destroyer</Option>
+          <Option>Diabolus</Option>
+          <Option>Dingir</Option>
+          <Option>Dronya</Option>
+          <Option>Eagle Union</Option>
+          <Option>El Shaddai</Option>
+          <Option>Elder Dragon</Option>
+          <Option>Enki</Option>
+          <Option>Enlil</Option>
+          <Option>Enoch</Option>
+          <Option>Ereshkigal</Option>
+          <Option>Etna</Option>
+          <Option>E☆2</Option>
+          <Option>Flonne</Option>
+          <Option>Fuka</Option>
+          <Option>Gambiel</Option>
+          <Option>Gear Dragon</Option>
+          <Option>Gigantic</Option>
+          <Option>Gilgamesh</Option>
+          <Option>Glorious Dragon</Option>
+          <Option>Guardian</Option>
+          <Option>Heavy Cruiser</Option>
+          <Option>Himekami</Option>
+          <Option>Hourai</Option>
+          <Option>Hundred Knight</Option>
+          <Option>Huninnmuginn</Option>
+          <Option>iDA</Option>
+          <Option>Idealize</Option>
+          <Option>Igalima</Option>
+          <Option>Inanna</Option>
+          <Option>Iron Blood</Option>
+          <Option>Ishtar</Option>
+          <Option>Junya Kazami</Option>
+          <Option>Jupiel</Option>
+          <Option>Kaiten Mutenmaru</Option>
+          <Option>Ki</Option>
+          <Option>Killer Machine</Option>
+          <Option>Killia</Option>
+          <Option>Kisaragi</Option>
+          <Option>Lahamu</Option>
+          <Option>Laharl</Option>
+          <Option>Lalami</Option>
+          <Option>Lamastu</Option>
+          <Option>Lavily Lalula La</Option>
+          <Option>Leafer</Option>
+          <Option>Liezerota</Option>
+          <Option>Light Aircraft Carrier</Option>
+          <Option>Light Cruiser</Option>
+          <Option>Lilliel</Option>
+          <Option>Luca</Option>
+          <Option>Lucifel</Option>
+          <Option>Lulu</Option>
+          <Option>Lycanthrope</Option>
+          <Option>Majorita</Option>
+          <Option>Mao</Option>
+          <Option>Marduk</Option>
+          <Option>Mariel</Option>
+          <Option>Marona</Option>
+          <Option>Mega Man</Option>
+          <Option>Meister</Option>
+          <Option>Mermaid</Option>
+          <Option>Metal Fortress</Option>
+          <Option>Metallia</Option>
+          <Option>Mid-Boss</Option>
+          <Option>Milm</Option>
+          <Option>Mion</Option>
+          <Option>Monitor</Option>
+          <Option>Monster Hunter</Option>
+          <Option>Ms. Dungeon</Option>
+          <Option>Mythos</Option>
+          <Option>Nammu</Option>
+          <Option>Nanaya</Option>
+          <Option>Nannal</Option>
+          <Option>Nergal</Option>
+          <Option>Nezaria</Option>
+          <Option>Ningal</Option>
+          <Option>Ninhursag</Option>
+          <Option>Ninkasi</Option>
+          <Option>Ninurta</Option>
+          <Option>Nosferatu</Option>
+          <Option>Overboost</Option>
+          <Option>Overshift</Option>
+          <Option>Petta</Option>
+          <Option>Phyllis</Option>
+          <Option>Plasect</Option>
+          <Option>Pram</Option>
+          <Option>Predator</Option>
+          <Option>Priere</Option>
+          <Option>Prinny</Option>
+          <Option>Punisher</Option>
+          <Option>Puppet Soldier</Option>
+          <Option>Raspberyl</Option>
+          <Option>Red Magnus</Option>
+          <Option>Repair Ship</Option>
+          <Option>Retrofit</Option>
+          <Option>Reunion</Option>
+          <Option>Royal Navy</Option>
+          <Option>Rozalin</Option>
+          <Option>Rutile</Option>
+          <Option>Sacred Beast</Option>
+          <Option>Saki Hojo</Option>
+          <Option>Sakura Empire</Option>
+          <Option>Seraphina</Option>
+          <Option>Shamash</Option>
+          <Option>SHiFT</Option>
+          <Option>Shulshagana</Option>
+          <Option>Sicily</Option>
+          <Option>Soichiro Kogure</Option>
+          <Option>Stella</Option>
+          <Option>Submarine</Option>
+          <Option>Sud</Option>
+          <Option>Tama</Option>
+          <Option>Tiamat</Option>
+          <Option>Tortures</Option>
+          <Option>Tractatus de Monstrum</Option>
+          <Option>True Dragon</Option>
+          <Option>Unlimited Boost</Option>
+          <Option>Usalia</Option>
+          <Option>Valentine</Option>
+          <Option>Valvatorez</Option>
+          <Option>Vesparose</Option>
+          <Option>Vine Dragon</Option>
+          <Option>Visco</Option>
+          <Option>Void Dark</Option>
+          <Option>Waker</Option>
+          <Option>World Avatar</Option>
+          <Option>Yith</Option>
+          <Option>Zababa</Option>
+          <Option>Zeccar</Option>
+          <Option>Zeroken</Option>
+          <Option>Zetta</Option>
+
+        </Dropdown>
+      </VerticalLayout>
+      <VerticalLayout>
+        <Text>Player:</Text>
+        <Dropdown id="player-Purple" onValueChanged="changeFilter">
+          <Option id="defaultPlayer-Purple">None</Option>
+          <Option>Arane P</Option>
+          <Option>Arane P EX</Option>
+          <Option>Asuka</Option>
+          <Option>Asuka EX</Option>
+          <Option>Avance EX</Option>
+          <Option>Ayase</Option>
+          <Option>Ayase EX</Option>
+          <Option>Azumi</Option>
+          <Option>Azumi EX</Option>
+          <Option>Azur EX</Option>
+          <Option>Bane</Option>
+          <Option>Barahara</Option>
+          <Option>Brionac EX</Option>
+          <Option>Cana P</Option>
+          <Option>Cana P EX</Option>
+          <Option>Chitose</Option>
+          <Option>Chitose EX</Option>
+          <Option>Commander</Option>
+          <Option>Dakki EX</Option>
+          <Option>Ea</Option>
+          <Option>Ea EX</Option>
+          <Option>Ena</Option>
+          <Option>Enju P</Option>
+          <Option>Enju P EX</Option>
+          <Option>Etsumin</Option>
+          <Option>Honome</Option>
+          <Option>Honome EX</Option>
+          <Option>Horus EX</Option>
+          <Option>Iriuda</Option>
+          <Option>Iriuda EX</Option>
+          <Option>Izumo</Option>
+          <Option>Izumo EX</Option>
+          <Option>Kasuga</Option>
+          <Option>Kasuga EX</Option>
+          <Option>Kazane EX</Option>
+          <Option>Kisara</Option>
+          <Option>Kisara EX</Option>
+          <Option>Kushuru</Option>
+          <Option>Levi</Option>
+          <Option>Lilian EX</Option>
+          <Option>Lyrph</Option>
+          <Option>Marie P</Option>
+          <Option>Marie P EX</Option>
+          <Option>Matoi</Option>
+          <Option>Meduse EX</Option>
+          <Option>Meiraru</Option>
+          <Option>Meteor EX</Option>
+          <Option>Mikado</Option>
+          <Option>Miko</Option>
+          <Option>Misaki</Option>
+          <Option>Misaki EX</Option>
+          <Option>Nammu EX</Option>
+          <Option>Nanao</Option>
+          <Option>Nanao EX</Option>
+          <Option>Niggu &#38; Theogo</Option>
+          <Option>Nina</Option>
+          <Option>Nina EX</Option>
+          <Option>Nino</Option>
+          <Option>Nu P</Option>
+          <Option>Nu P EX</Option>
+          <Option>Pecteilis P</Option>
+          <Option>Pecteilis P EX</Option>
+          <Option>Princess</Option>
+          <Option>Princess EX</Option>
+          <Option>Prism P</Option>
+          <Option>Prism P EX</Option>
+          <Option>Reia</Option>
+          <Option>Reia &#38; Suguru EX</Option>
+          <Option>Sakura</Option>
+          <Option>Sakura EX</Option>
+          <Option>Sera</Option>
+          <Option>Sera EX</Option>
+          <Option>Shana</Option>
+          <Option>Shana EX</Option>
+          <Option>Shuri</Option>
+          <Option>Sol</Option>
+          <Option>Soma</Option>
+          <Option>Suguru</Option>
+          <Option>Ugly P</Option>
+          <Option>Ugly P EX</Option>
+          <Option>Urara</Option>
+          <Option>Urara EX</Option>
+          <Option>Yachiyo</Option>
+          <Option>Yachiyo EX</Option>
+          <Option>Yamato</Option>
+          <Option>Yith</Option>
+          <Option>Yith EX</Option>
+          <Option>Yui</Option>
+          <Option>Yuni</Option>
+          <Option>Yutaka</Option>
+          <Option>Yutaka EX</Option>
+
+        </Dropdown>
+      </VerticalLayout>
+    </HorizontalLayout>
+    <VerticalLayout padding="0 0 15 15" spacing="15">
+      <InputField
+        id="powerSearch-Purple"
+        placeholder="Search by power"
+        onValueChanged="changeSearch"
+      ></InputField>
+      <InputField
+        id="costSearch-Purple"
+        placeholder="Search by cost"
+        onValueChanged="changeSearch"
+      ></InputField>
+      <InputField
+        id="nameSearch-Purple"
+        placeholder="Search by name"
+        onValueChanged="changeSearch"
+      ></InputField>
+      <InputField
+        id="textSearch-Purple"
+        placeholder="Search by effect text"
+        onValueChanged="changeSearch"
+      ></InputField>
+    </VerticalLayout>
+    <HorizontalLayout
+      childAlignment="MiddleCenter"
+      spacing="15"
+      preferredHeight="28"
+      flexibleHeight="0"
+    >
+      <Button
+        alignment="MiddleCenter"
+        onClick="applyFilters"
+        color="#66ff66"
+      >Apply</Button>
+      <Button alignment="MiddleCenter" onClick="resetFilters">Reset</Button>
+      <Button alignment="MiddleCenter" onClick="closeFilters">Close</Button>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Panel>
+<Button
+  width="200"
+  height="100"
+  rectAlignment="LowerRight"
+  offsetXY="-100 30"
+  alignment="MiddleCenter"
+  fontSize="28"
+  onClick="openFilters"
+  visibility="Purple"
+>
+  Filters
+</Button>

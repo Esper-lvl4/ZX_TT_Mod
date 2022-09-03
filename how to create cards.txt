@@ -1,0 +1,64 @@
+link: https://www.reddit.com/r/tabletopsimulator/comments/m2xa4r/help_please_spawning_an_entire_file_of_saved/
+
+There's no out of the box way from TTS itself. But since you have all the files on disc and said you have Python experience, you can do this outside of TTS. Saved objects are nothing different than a save game for TTS. You can find you saved objects in the TTS folder (in you user home at Documents\My Games\Tabletop Simulator\Saves\Saved Objects). They all look something like this:
+
+{
+  "SaveName": "",
+  /* also other properties */
+  "ObjectStates": [
+    {
+      "Name": "CardCustom",
+      "Nickname": "Card Name"
+      /* lots of other properties */
+    }
+  ]
+}
+
+What you can do is create a new object from this information. Create a Python script that traverses your directory containing the objects. Load each JSON and extract the ObjectStates properties (this is the actual saved object). Put that into a new dictionary that looks like a save game and add it to its ObjectStates property. So in the end, you'd end up with a save file that has a ObjectStates property containing your 17.000 cards.
+
+But spawning them all at once could be very heavy for TTS. I don't know whether it will be able to do that. You'd probalby have to also add some decks or bags (e.g. for each edition) and spawn them instead of all cards at once. This will prevent TTS from spawning everything at the same time. To do this, you can again alter the ObjectStates property while traversing your directory of JSON. You'd need to understand how TTS saves decks so you know which properties you need. So spawn some of your cards, create a deck from them, save it as an object and look at the resulting JSON. This should give you an idea of what it would look like.
+
+Edit: Also, another approach I use for my mods: I create a Lua file containing a list of all game components I want to create. I also use a Python script to traverse a dictionary containing the images or a csv file or whatever is there. You could do this with your JSON files as well. In the end, I create a file something like this, that contains all the data of all components:
+
+local Game = {
+  abilities = {
+    ["Ability1"] = {
+      image = "link_to_card_image",
+      back = "link_to_card_image",
+      otherProperty = "1", -- some other property of the card, e.g. the cost
+    },
+    ["Ability2"] = {
+      image = "link_to_card_image",
+      back = "link_to_card_image",
+      otherProperty = "2",
+    },
+  },
+}
+
+I then have a script inside the mod that spawns all the content from this file, using TTS spawnObjectData(). I also have helper function, that create the correct information (e.g. see here). spawnObjectData wants the same kind of information you see in the JSON save file. The usage would be something like this:
+
+local ObjectState = require("sebaestschjin-tts.ObjectState")
+
+local function spawnAbilities() {
+    local cards = {}
+
+    for abilityName, ability in pairs(Game.abilites) do
+        local card = ObjectState.cardCustom({
+            name = abilityName,
+            image = ability.image,
+            imageBack = ability.back,
+        })
+        table.insert(cards, card)
+    end
+
+    local abilityDeck = ObjectState.deckCustom({
+        name = "Ability Deck",
+        cards = cards, }
+    )
+
+    spawnObjectData({
+        data = abilityDeck,
+        position = { 0, 0, 0 },
+        rotation = { 0, 180, 0 },
+    })
+}

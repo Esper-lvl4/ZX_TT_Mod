@@ -1,0 +1,87 @@
+type - up to 2
+color - up to 6
+tribe - up to 4
+icon - up to 1
+player - up to 1
+
+
+==============Deck building========================
+* Deck size - 50 main deck, 16 Dynamis (extra deck).
+* Copies per deck - 4 copies. Only 1 Z/X Overboost per deck.
+* Player cards and PL EX (Player Extra) are not part of the deck. If you use Player Extra, you cannot use Z/X Overboost and vice versa. Also you may only use 1 card of those types at all.
+* Life Recovery - it's either [Special] Life Recovery or [Always]. You can only have up to 4 cards with this ability in the deck.
+* Void Bringer - it's either [Special] Life Recovery or [Always]. You can only have up to 4 cards with this ability in the deck.
+* Ignition Icon - you must have have 20 cards with this icon (including Life Recovery and Void Bringer). Write a check when deckbuilding.
+* [Always] Start Card - write a script to find this card in the deck by clicking a button.
+* [Always] Gate Card - write a script to find this card in the deck by clicking a button.
+* [Always] Start Resource - write a script to find this card in the deck by clicking a button.
+===================================================
+
+==============Zones================================
+* Square - Player Square or Normal Square
+* Resource
+* Deck
+* Dynamis
+* Trash
+* Charge
+* Life
+===================================================
+
+==============Card types===========================
+* Z/X
+* Event
+* Player
+* Z/X EX (Z/X Extra)
+* EV EX (Event Extra)
+* PL EX (Player Extra)
+* Shift
+* Z/X OB (Z/X Overboost)
+* Shift
+* Marker
+* Token
+===================================================
+
+==============Card stats===========================
+* Name
+* Type
+* Cost
+* Color
+* Text
+* Subtext
+* Icon - Ignition or Evol Seed
+* Tribe
+* Power
+* Player Name
+===================================================
+
+==============Ability types===========================
+* Boot
+* Auto
+* Always
+* Special
+* Event
+* Zero Optima X
+* Lv X (Level X)
+* Z/Xtend Drive!
+===================================================
+
+==============Ability icons and keywords===========================
+* Player
+* Valid
+* Effect
+* Cost
+* Trigger
+* Square designation diagramm (need to parse it)
+* Sleep
+* Color X (for Cost)
+* Advent Condition
+* Awaken Condition
+* Idealize Condition
+* Alter Break
+===================================================
+
+==============Card abilities=======================
+* [Always] Absolute Boundary
+* Overdrive
+* Shift
+===================================================
