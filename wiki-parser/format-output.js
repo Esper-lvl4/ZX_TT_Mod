@@ -47,7 +47,8 @@ const EXCLUDED_MATCHES = [
 const BAGS = new Map();
 const RESERVED_HASHES = [
   '5e7847', 'd9c954', 'e5b75d', '84d9b3', '721653', '65cea8', 'da6d5e', '9c09d5',
-  '70f02a', 'd27265', 'dc59e6', '0206f0', 'caddbe', '4116d5', '442907', '8a3626', '3612da'
+  '70f02a', 'd27265', 'dc59e6', '0206f0', 'caddbe', '4116d5', '442907', '8a3626', 
+  '3612da', '5ec481', '2bb5fc', '70f02a'
 ];
 const usedHashes = new Set(RESERVED_HASHES);
 
