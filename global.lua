@@ -18,6 +18,11 @@ function getObjects()
   deckEditorPaginationZone = getObjectFromGUID('84d9b3')
   deckEditorDeckZone = getObjectFromGUID('da6d5e')
   deckEditorDynamisZone = getObjectFromGUID('9c09d5')
+  
+  deckZoneRed = getObjectFromGUID('4116d5')
+  resourceZoneRed = getObjectFromGUID('442907')
+  deckZoneBlue = getObjectFromGUID('8a3626')
+  resourceZoneBlue = getObjectFromGUID('3612da')
 
   leftBoard = getObjectFromGUID('d27265')
   rightBoard = getObjectFromGUID('dc59e6')
@@ -290,6 +295,122 @@ function setupFilters()
   filterManagement.loadPage = loadPage
 end
 
+function createDrawAndUntap()
+    deckZoneRed.createButton({
+    click_function = 'untapAndDraw_Red',
+    function_owner = self,
+    label = 'Start Turn',
+    position = {-1, -0.4, 0},
+    rotation = {0, 180, 0},
+    scale = {1, 1, 1},
+    width = 300,
+    height = 100,
+    font_size = 50,
+    color = {1, 1, 1},
+    font_color = {0, 0, 0},
+    tooltip = 'Untap Resources and Draw 2.'
+  })
+
+  deckZoneBlue.createButton({
+    click_function = 'untapAndDraw_Blue',
+    function_owner = self,
+    label = 'Start Turn',
+    position = {-1, -0.4, 0},
+    rotation = {0, 180, 0},
+    scale = {1, 1, 1},
+    width = 300,
+    height = 100,
+    font_size = 50,
+    color = {1, 1, 1},
+    font_color = {0, 0, 0},
+    tooltip = 'Untap Resources and Draw 2.'
+  })
+end
+
+function untapAndDraw_Red()
+  if deckExistsRed() then
+    getDeckRed().deal(2, "Red")
+  end
+  untapResourcesRed()
+end
+
+function untapAndDraw_Blue()
+  if deckExistsBlue() then
+    getDeckBlue().deal(2, "Blue")
+  end
+  untapResourcesBlue()
+end
+
+function getDeckRed()
+  local zoneObjects
+  zoneObjects = deckZoneRed.getObjects()
+
+  for _, item in ipairs(zoneObjects) do
+      if item.tag == 'Deck' then
+          return item
+      end
+  end
+
+  for _, item in ipairs(zoneObjects) do
+      if item.tag == 'Card' then
+          return item
+      end
+  end
+  return nil
+end
+function getDeckBlue()
+  local zoneObjects
+  zoneObjects = deckZoneBlue.getObjects()
+
+  for _, item in ipairs(zoneObjects) do
+      if item.tag == 'Deck' then
+          return item
+      end
+  end
+
+  for _, item in ipairs(zoneObjects) do
+      if item.tag == 'Card' then
+          return item
+      end
+  end
+  return nil
+end
+
+function deckExistsRed()
+    return getDeckRed() != nil
+end
+
+function deckExistsBlue()
+  return getDeckBlue() != nil
+end
+
+function untapResourcesRed()
+  local resourceObjects
+  resourceObjects = resourceZoneRed.getObjects()
+  
+  for _, item in ipairs(resourceObjects) do
+    if item.tag == 'Card' then
+      if item.getRotation().y > 0.1 then
+        item.rotate({x=0, y=-90, z=0})
+      end
+    end
+  end
+  return nil
+end
+function untapResourcesBlue()
+  local resourceObjects
+  resourceObjects = resourceZoneBlue.getObjects()
+  
+  for _, item in ipairs(resourceObjects) do
+    if item.tag == 'Card' then
+      if item.getRotation().y > 0.1 then
+        item.rotate({x=0, y=-90, z=0})
+      end
+    end
+  end
+  return nil
+end
+
 function changeFilter(player, value, id)
   local currentFilter = playerFilters[player.color]
   if id == 'color-'..player.color then currentFilter.colorFilter = value end
@@ -358,12 +479,11 @@ end
 function onLoad()
   getObjects()
   setupFilters()
+  createDrawAndUntap()
   playerFilters = {
     Red = prepareFiltersForPlayer(),
     Blue = prepareFiltersForPlayer(),
     Green = prepareFiltersForPlayer(),
     Purple = prepareFiltersForPlayer(),
   }
-
-  Player.White.changeColor('Red')
 end
