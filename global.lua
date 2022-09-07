@@ -25,6 +25,7 @@ function getObjects()
   resourceZoneBlue = getObjectFromGUID('3612da')
   trashZoneRed = getObjectFromGUID('5ec481')
   trashZoneBlue = getObjectFromGUID('2bb5fc')
+  fieldZone = getObjectFromGUID('924f57')
 
   leftBoard = getObjectFromGUID('d27265')
   rightBoard = getObjectFromGUID('dc59e6')
@@ -298,11 +299,11 @@ function setupFilters()
 end
 
 function createDrawAndUntap()
-  deckZoneRed.createButton({
+    deckZoneRed.createButton({
     click_function = 'untapAndDraw_Red',
     function_owner = self,
     label = 'Start Turn',
-    position = {-0.95, -0.4, 0},
+    position = {-1.5, -0.4, 0},
     rotation = {0, 180, 0},
     scale = {1, 1, 1},
     width = 300,
@@ -317,7 +318,7 @@ function createDrawAndUntap()
     click_function = 'untapAndDraw_Blue',
     function_owner = self,
     label = 'Start Turn',
-    position = {-0.95, -0.4, 0},
+    position = {-1.5, -0.4, 0},
     rotation = {0, 180, 0},
     scale = {1, 1, 1},
     width = 300,
@@ -332,6 +333,7 @@ end
 function untapAndDraw_Red()
   local flag = false
   untapResourcesRed()
+  untapUnitsRed()
   if deckExistsRed() then
     if getDeckRed().tag == 'Deck' then
       getDeckRed().deal(2, "Red")
@@ -360,6 +362,7 @@ end
 function untapAndDraw_Blue()
   local flag = false
   untapResourcesBlue()
+  untapUnitsBlue()
   if deckExistsBlue() then
     if getDeckBlue().tag == 'Deck' then 
       getDeckBlue().deal(2, "Blue")
@@ -383,6 +386,28 @@ function untapAndDraw_Blue()
     end,
     1
   )
+end
+
+function untapUnitsRed()
+  local fieldObjects = fieldZone.getObjects()
+  for _, card in ipairs(fieldObjects) do
+    if card.hasTag('RedCard') then
+      if card.getRotation().y > 0.1 then
+        card.setRotation({x=0, y=180, z=0})
+      end
+    end
+  end
+end
+
+function untapUnitsBlue()
+  local fieldObjects = fieldZone.getObjects()
+  for _, card in ipairs(fieldObjects) do
+    if card.hasTag('BlueCard') then
+      if card.getRotation().y > 0.1 then
+        card.setRotation({x=0, y=0, z=0})
+      end
+    end
+  end
 end
 
 function  refreshDeckRed()
@@ -551,16 +576,17 @@ function resetFilters(player)
   UI.setAttribute('costSearch-'..player.color, 'text', '')
 end
 
+
 function onLoad()
   getObjects()
   setupFilters()
   createDrawAndUntap()
+  fieldZone.addTag('RedCard')
+  fieldZone.addTag('BlueCard')
   playerFilters = {
     Red = prepareFiltersForPlayer(),
     Blue = prepareFiltersForPlayer(),
     Green = prepareFiltersForPlayer(),
     Purple = prepareFiltersForPlayer(),
   }
-
-  Player.White.changeColor('Red')
 end
