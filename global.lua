@@ -589,4 +589,6 @@ function onLoad()
     Green = prepareFiltersForPlayer(),
     Purple = prepareFiltersForPlayer(),
   }
+
+  Player.White.changeColor('Red')
 end
