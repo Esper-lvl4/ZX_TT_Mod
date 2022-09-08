@@ -1882,6 +1882,51 @@ async function getSaveSceleton() {
         XmlUI: ""
       },
       {
+        GUID: "924f57",
+        Name: "ScriptingTrigger",
+        Transform: {
+          posX: 37.859375,
+          posY: 3.52000022,
+          posZ: 0.0704083443,
+          rotX: 0.0,
+          rotY: 359.5002,
+          rotZ: 0.0,
+          scaleX: 27.420763,
+          scaleY: 5.1,
+          scaleZ: 27.7764282
+        },
+        Nickname: "",
+        Description: "",
+        GMNotes: "",
+        ColorDiffuse: {
+          r: 1.0,
+          g: 1.0,
+          b: 1.0,
+          a: 0.509803951
+        },
+        Tags: [
+          "BlueCard",
+          "RedCard"
+        ],
+        LayoutGroupSortIndex: 0,
+        Value: 0,
+        Locked: true,
+        Grid: true,
+        Snap: true,
+        IgnoreFoW: false,
+        MeasureMovement: false,
+        DragSelectable: true,
+        Autoraise: true,
+        Sticky: true,
+        Tooltip: true,
+        GridProjection: false,
+        HideWhenFaceDown: false,
+        Hands: false,
+        LuaScript: "",
+        LuaScriptState: "",
+        XmlUI: ""
+      },
+      {
         GUID: "caddbe",
         Name: "Custom_PDF",
         Transform: {
