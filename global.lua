@@ -93,10 +93,10 @@ function setupFilters()
         end
       end
 
-      local correctColor = colorFilter == 'None' or string.match(matches.color, colorFilter)
+      local correctColor = colorFilter == 'None' or (matches.color and string.match(matches.color, colorFilter))
       local correctType = typeFilter == 'Any' or (matches.type and string.match(matches.type, typeFilter)) or (typeFilter == 'No type' and not matches.type)
       local correctTribe = tribeFilter == 'None' or (matches.tribe and string.match(matches.tribe, tribeFilter))
-      local correctPlayer = playerFilter == 'None' or (matches.player and matches.player == playerFilter) or string.match(card.description, playerFilter) or (card.name and string.match(card.name, playerFilter))
+      local correctPlayer = playerFilter == 'None' or (matches.player and matches.player == playerFilter) or (matches.description and string.match(card.description, playerFilter)) or (card.name and string.match(card.name, playerFilter))
       local correctIcon = iconFilter == 'None' or (matches.icon and matches.icon == iconFilter) or (iconFilter == 'No icon' and not matches.icon)
       local hasNameMatch = nameSearch == '' or (card.name and string.match(card.name, nameSearch))
       local hasTextMatch = textSearch == '' or (card.description and string.match(card.description, textSearch))
