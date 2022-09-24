@@ -3255,6 +3255,16 @@
     "title": "Azure Sky Engage, Type.I \"A-Z\""
   },
   {
+    "pageid": 37952,
+    "ns": 0,
+    "title": "Azure Two Stars, Azumi"
+  },
+  {
+    "pageid": 37953,
+    "ns": 0,
+    "title": "Azure Two Stars, Rigel"
+  },
+  {
     "pageid": 34131,
     "ns": 0,
     "title": "B38-062"
@@ -3400,6 +3410,11 @@
     "title": "Battle-Axe Workshop, Bardiche"
   },
   {
+    "pageid": 37948,
+    "ns": 0,
+    "title": "Battle-Worn, Quick Draw"
+  },
+  {
     "pageid": 20392,
     "ns": 0,
     "title": "Battle Butler, Eudi"
@@ -3528,6 +3543,11 @@
     "pageid": 12281,
     "ns": 0,
     "title": "Beast Claw of Regeneration, Wiedergabe"
+  },
+  {
+    "pageid": 37927,
+    "ns": 0,
+    "title": "Beast Shaman, Phosflamme"
   },
   {
     "pageid": 21021,
@@ -4443,6 +4463,11 @@
     "pageid": 12700,
     "ns": 0,
     "title": "Bloom-Raising Cherry Blossom, Noble Grove"
+  },
+  {
+    "pageid": 37958,
+    "ns": 0,
+    "title": "Blooming \"Exaggeration\", Astarte"
   },
   {
     "pageid": 30603,
@@ -6285,6 +6310,11 @@
     "title": "Cheerful Date, Ugly"
   },
   {
+    "pageid": 37945,
+    "ns": 0,
+    "title": "Cheerful Hunter, Nei"
+  },
+  {
     "pageid": 30635,
     "ns": 0,
     "title": "Cheerful Magicall, Cocoa"
@@ -6463,6 +6493,11 @@
     "pageid": 36453,
     "ns": 0,
     "title": "Choose"
+  },
+  {
+    "pageid": 37931,
+    "ns": 0,
+    "title": "Chopping Chaos, Nyarlathotep"
   },
   {
     "pageid": 6151,
@@ -6763,6 +6798,11 @@
     "pageid": 25728,
     "ns": 0,
     "title": "Come into Battle, Rigel"
+  },
+  {
+    "pageid": 37934,
+    "ns": 0,
+    "title": "Comet Form, Sakura"
   },
   {
     "pageid": 2138,
@@ -7815,6 +7855,11 @@
     "title": "Darkness-Severing Cross, Realm Razer"
   },
   {
+    "pageid": 37955,
+    "ns": 0,
+    "title": "Darkness Divine Knight of Coaxing Ruin, K2"
+  },
+  {
     "pageid": 30249,
     "ns": 0,
     "title": "Darkness Eyes Engage, Invidia"
@@ -7843,6 +7888,16 @@
     "pageid": 13802,
     "ns": 0,
     "title": "Darkness Knight, Yearning K2"
+  },
+  {
+    "pageid": 37957,
+    "ns": 0,
+    "title": "Darkness Knight of Black Cloth, Sagarmatha"
+  },
+  {
+    "pageid": 37956,
+    "ns": 0,
+    "title": "Darkness Knight of Dusk Sky, K2"
   },
   {
     "pageid": 9855,
@@ -9885,6 +9940,11 @@
     "title": "Drone Handler Transformant, Gunpod"
   },
   {
+    "pageid": 37936,
+    "ns": 0,
+    "title": "Drone Reactor, Sakura"
+  },
+  {
     "pageid": 3927,
     "ns": 0,
     "title": "Drop Sound, Fiore"
@@ -11788,6 +11848,11 @@
     "pageid": 37201,
     "ns": 0,
     "title": "Extra Pack 35: Z/X Legend Gaming Edition"
+  },
+  {
+    "pageid": 37891,
+    "ns": 0,
+    "title": "Extra Pack 36: Elysium Waker"
   },
   {
     "pageid": 6267,
@@ -13720,6 +13785,26 @@
     "title": "Gallnut Spider, Venom Tarantula"
   },
   {
+    "pageid": 37928,
+    "ns": 0,
+    "title": "Game Master, Aleister"
+  },
+  {
+    "pageid": 37938,
+    "ns": 0,
+    "title": "Game Start! CHASE HAZARD 3"
+  },
+  {
+    "pageid": 37949,
+    "ns": 0,
+    "title": "Game Start! Guns! Guns! Calamity"
+  },
+  {
+    "pageid": 37937,
+    "ns": 0,
+    "title": "Game Start! Meteor Blade RPG"
+  },
+  {
     "pageid": 10379,
     "ns": 0,
     "title": "Gandiva"
@@ -14103,6 +14188,11 @@
     "pageid": 10819,
     "ns": 0,
     "title": "Glaring \"Skypath\", Nergal"
+  },
+  {
+    "pageid": 37932,
+    "ns": 0,
+    "title": "Glaring Pity"
   },
   {
     "pageid": 20426,
@@ -14568,6 +14658,11 @@
     "pageid": 33750,
     "ns": 0,
     "title": "Graceful Release, Kalavinka"
+  },
+  {
+    "pageid": 37944,
+    "ns": 0,
+    "title": "Graceful Revenger, Kasuga"
   },
   {
     "pageid": 8022,
@@ -18650,6 +18745,11 @@
     "title": "Leader of Fortiare, Tio"
   },
   {
+    "pageid": 37926,
+    "ns": 0,
+    "title": "Leader of Meteor Chivalric Order, Sakura"
+  },
+  {
     "pageid": 12638,
     "ns": 0,
     "title": "Leader of Puppet Troupe, Theatrum"
@@ -20450,6 +20550,11 @@
     "title": "Mission! Team Great Bevatron"
   },
   {
+    "pageid": 37930,
+    "ns": 0,
+    "title": "Mistwalker, Lavender"
+  },
+  {
     "pageid": 6606,
     "ns": 0,
     "title": "Mobile Mahabodhi, Krypton"
@@ -21308,6 +21413,11 @@
     "pageid": 29429,
     "ns": 0,
     "title": "Night Festival Pleasure, Hastur"
+  },
+  {
+    "pageid": 37959,
+    "ns": 0,
+    "title": "Nightmare Princess"
   },
   {
     "pageid": 16032,
@@ -22815,6 +22925,11 @@
     "title": "Performer Voice, Vival"
   },
   {
+    "pageid": 37946,
+    "ns": 0,
+    "title": "Perfume Dancer, Luxuria"
+  },
+  {
     "pageid": 17689,
     "ns": 0,
     "title": "Perfume Maker, Shabon"
@@ -24290,6 +24405,11 @@
     "title": "Purple Gem of Unity, Rhodolite Hyena"
   },
   {
+    "pageid": 37935,
+    "ns": 0,
+    "title": "QUEST: Destroy the Sealed Ancient Weapon!"
+  },
+  {
     "pageid": 16011,
     "ns": 0,
     "title": "Qillatu"
@@ -25655,6 +25775,11 @@
     "title": "Rondo to the Wishing Infinity"
   },
   {
+    "pageid": 37933,
+    "ns": 0,
+    "title": "Rookie Dead, Catherine"
+  },
+  {
     "pageid": 6351,
     "ns": 0,
     "title": "Rookie Guardian, Marshall"
@@ -26500,6 +26625,11 @@
     "title": "Seal God & Legend Designation"
   },
   {
+    "pageid": 37929,
+    "ns": 0,
+    "title": "Seal Unleashed! Ancient Weapon-chan"
+  },
+  {
     "pageid": 6623,
     "ns": 0,
     "title": "Seal Unleashed, Shinobu"
@@ -27068,6 +27198,11 @@
     "pageid": 22860,
     "ns": 0,
     "title": "Sheltered Daughter, Were-Degu"
+  },
+  {
+    "pageid": 37947,
+    "ns": 0,
+    "title": "Sheriff Star, Tiamat"
   },
   {
     "pageid": 9408,
@@ -31560,6 +31695,11 @@
     "title": "Twenty Pairs of Swords, Schwert"
   },
   {
+    "pageid": 37950,
+    "ns": 0,
+    "title": "Twilight Gunslinger"
+  },
+  {
     "pageid": 31263,
     "ns": 0,
     "title": "Twilight Innocence, Asuka"
@@ -31678,6 +31818,11 @@
     "pageid": 7672,
     "ns": 0,
     "title": "Two Loyalty"
+  },
+  {
+    "pageid": 37951,
+    "ns": 0,
+    "title": "Two Stars of Wasteland, Rigel & Azumi"
   },
   {
     "pageid": 13564,
@@ -32783,6 +32928,11 @@
     "pageid": 14430,
     "ns": 0,
     "title": "Waste Fang, Verlieren"
+  },
+  {
+    "pageid": 37954,
+    "ns": 0,
+    "title": "Wasteland Lightning, Wild Bunch"
   },
   {
     "pageid": 12229,
