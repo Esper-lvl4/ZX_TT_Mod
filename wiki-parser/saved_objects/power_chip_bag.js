@@ -1,0 +1,96 @@
+module.exports = [
+  {
+    GUID: "0206f0",
+    Name: "Infinite_Bag",
+    Transform: {
+      posX: 14.999999,
+      posY: 0.9530005,
+      posZ: -3.00000143,
+      rotX: 4.0891955E-06,
+      rotY: 270.0,
+      rotZ: -1.68340307E-06,
+      scaleX: 1.0,
+      scaleY: 1.0,
+      scaleZ: 1.0
+    },
+    Nickname: "Power Chip",
+    Description: "",
+    GMNotes: "",
+    ColorDiffuse: {
+      "r": 1.0,
+      "g": 0.607784569,
+      "b": 0.305881768
+    },
+    LayoutGroupSortIndex: 0,
+    Value: 0,
+    Locked: true,
+    Grid: true,
+    Snap: true,
+    IgnoreFoW: false,
+    MeasureMovement: false,
+    DragSelectable: true,
+    Autoraise: true,
+    Sticky: true,
+    Tooltip: true,
+    GridProjection: false,
+    HideWhenFaceDown: false,
+    Hands: false,
+    MaterialIndex: -1,
+    MeshIndex: -1,
+    LuaScript: "",
+    LuaScriptState: "",
+    XmlUI: "",
+    ContainedObjects: [
+      {
+        GUID: "0d932a",
+        Name: "Custom_Model",
+        Transform: {
+          posX: 1.69704759,
+          posY: 10.3046236,
+          posZ: -23.8094,
+          rotX: 359.591583,
+          rotY: 180.000015,
+          rotZ: 359.994049,
+          scaleX: 0.350000441,
+          scaleY: 0.350000441,
+          scaleZ: 0.350000441
+        },
+        Nickname: "",
+        Description: "",
+        GMNotes: "",
+        ColorDiffuse: {
+          r: 1.0,
+          g: 1.0,
+          b: 1.0
+        },
+        LayoutGroupSortIndex: 0,
+        Value: 0,
+        Locked: false,
+        Grid: true,
+        Snap: true,
+        IgnoreFoW: false,
+        MeasureMovement: false,
+        DragSelectable: true,
+        Autoraise: true,
+        Sticky: true,
+        Tooltip: true,
+        GridProjection: false,
+        HideWhenFaceDown: false,
+        Hands: false,
+        CustomMesh: {
+          MeshURL: "http://cloud-3.steamusercontent.com/ugc/1785133954065983269/A7810CBC1D9E3A3F0CB5A27FC6A99484CD2E3D42/",
+          DiffuseURL: "http://cloud-3.steamusercontent.com/ugc/1785133954065984174/89303F483DB473B2512C51D4EF8E226DDE34F089/",
+          NormalURL: "",
+          ColliderURL: "",
+          Convex: true,
+          MaterialIndex: 1,
+          TypeIndex: 5,
+          CastShadows: true
+        },
+        LuaScript: "",
+        LuaScriptState: "",
+        XmlUI: ""
+      }
+    ]
+  },
+];

@@ -14,16 +14,13 @@ function getObjects()
   local bagsZone = getObjectFromGUID('5e7847')
   bags = bagsZone.getObjects()
   deckEditorSelectZone = getObjectFromGUID('d9c954')
-  deckEditorFilterZone = getObjectFromGUID('e5b75d')
   deckEditorPaginationZone = getObjectFromGUID('84d9b3')
-  deckEditorDeckZone = getObjectFromGUID('da6d5e')
-  deckEditorDynamisZone = getObjectFromGUID('9c09d5')
   
   deckZoneRed = getObjectFromGUID('4116d5')
   resourceZoneRed = getObjectFromGUID('442907')
+  trashZoneRed = getObjectFromGUID('5ec481')
   deckZoneBlue = getObjectFromGUID('8a3626')
   resourceZoneBlue = getObjectFromGUID('3612da')
-  trashZoneRed = getObjectFromGUID('5ec481')
   trashZoneBlue = getObjectFromGUID('2bb5fc')
   fieldZone = getObjectFromGUID('924f57')
 
@@ -65,10 +62,6 @@ function setupFilters()
   
   local cards = {}
 
-  function addCardToDeck(card)
-
-  end
-
   function findCards()
     local foundCards = nil
 
@@ -96,7 +89,7 @@ function setupFilters()
       local correctColor = colorFilter == 'None' or (matches.color and string.match(matches.color, colorFilter))
       local correctType = typeFilter == 'Any' or (matches.type and string.match(matches.type, typeFilter)) or (typeFilter == 'No type' and not matches.type)
       local correctTribe = tribeFilter == 'None' or (matches.tribe and string.match(matches.tribe, tribeFilter))
-      local correctPlayer = playerFilter == 'None' or (matches.player and matches.player == playerFilter) or (matches.description and string.match(card.description, playerFilter)) or (card.name and string.match(card.name, playerFilter))
+      local correctPlayer = playerFilter == 'None' or (matches.player and string.match(matches.player, playerFilter)) or (card.description and string.match(card.description, playerFilter)) or (card.name and string.match(card.name, playerFilter))
       local correctIcon = iconFilter == 'None' or (matches.icon and matches.icon == iconFilter) or (iconFilter == 'No icon' and not matches.icon)
       local hasNameMatch = nameSearch == '' or (card.name and string.match(card.name, nameSearch))
       local hasTextMatch = textSearch == '' or (card.description and string.match(card.description, textSearch))
@@ -410,7 +403,7 @@ function untapUnitsBlue()
   end
 end
 
-function  refreshDeckRed()
+function refreshDeckRed()
   broadcastToAll("Blue must choose one of Red's life and put it into charge!")
   local zoneObjects
   zoneObjects = trashZoneRed.getObjects()
@@ -424,7 +417,7 @@ function  refreshDeckRed()
   return nil
 end
 
-function  refreshDeckBlue()
+function refreshDeckBlue()
   broadcastToAll("Red must choose one of Blue's life and put it into charge!")
   local zoneObjects
   zoneObjects = trashZoneBlue.getObjects()
@@ -592,3 +585,31 @@ function onLoad()
 
   Player.White.changeColor('Red')
 end
+
+function onObjectEnterZone(zone, object_entering)
+  if zone == deckZoneBlue then 
+    object_entering.addTag('BlueCard')
+    object_entering.removeTag('RedCard')
+  end
+
+  if zone == trashZoneBlue then 
+    object_entering.addTag('BlueCard')
+    object_entering.removeTag('RedCard')
+  end
+  
+  if zone == deckZoneRed then 
+    object_entering.addTag('RedCard')
+    object_entering.removeTag('BlueCard')
+  end
+  
+  if zone == trashZoneRed then 
+    object_entering.addTag('RedCard')
+    object_entering.removeTag('BlueCard')
+  end
+end
+
+-- function onObjectLeaveContainer(container, leave_object)
+--   if container.type == "Deck" then
+--     leave_object.addTag("BlueCard")
+--   end
+-- end
